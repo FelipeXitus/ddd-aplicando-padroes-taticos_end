@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Money } from 'src/contexts/shared/value-objects/money';
+import { Money } from '../../shared/value-objects/money';
 import { ProcessPaymentDto } from './process-payment.dto';
 
 export type PaymentResult =

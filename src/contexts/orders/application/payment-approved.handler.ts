@@ -1,5 +1,5 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
-import { parseError } from 'src/contexts/shared/errors';
+import { parseError } from '../../shared/errors';
 import type { PaymentApprovedPayload } from '../../shared/orders-payments.kernel';
 import { OrderId } from '../domain/order/order-id';
 import type { OrderRepository } from '../domain/order/order.repository';

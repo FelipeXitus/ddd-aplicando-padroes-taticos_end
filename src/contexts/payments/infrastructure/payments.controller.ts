@@ -1,5 +1,5 @@
 import { BadRequestException, Body, Controller, Post } from '@nestjs/common';
-import { OrdersPaymentsKernel } from 'src/contexts/shared/orders-payments.kernel';
+import { OrdersPaymentsKernel } from '../../shared/orders-payments.kernel';
 import { PaymentService } from '../application/payment.service';
 import { ProcessPaymentDto } from '../application/process-payment.dto';
 

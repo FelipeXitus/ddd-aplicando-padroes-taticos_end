@@ -1,7 +1,7 @@
 
 # Create a new cart
 # @name createCart
-POST http://localhost:3000/carts
+POST http://localhost:3001/carts
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 # Add item to cart
 
 @cartId = {{createCart.response.body.cartId}}
-POST http://localhost:3000/carts/{{cartId}}/items
+POST http://localhost:3001/carts/{{cartId}}/items
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Content-Type: application/json
 
 ###
 # Add item 2 to cart
-POST http://localhost:3000/carts/{{cartId}}/items
+POST http://localhost:3001/carts/{{cartId}}/items
 Content-Type: application/json
 
 {
@@ -33,16 +33,16 @@ Content-Type: application/json
 ###
 
 # Get cart by ID
-GET http://localhost:3000/carts/{{cartId}}
+GET http://localhost:3001/carts/{{cartId}}
 
 ###
 # Get non-existing cart
-GET http://localhost:3000/carts/00000000-0000-0000-0000-000000000000
+GET http://localhost:3001/carts/00000000-0000-0000-0000-000000000000
 
 ###
 # Checkout cart
 # @name checkout
-POST http://localhost:3000/carts/{{cartId}}/checkout
+POST http://localhost:3001/carts/{{cartId}}/checkout
 Content-Type: application/json
 
 {
@@ -57,7 +57,7 @@ Content-Type: application/json
 
 ###
 @orderId = {{checkout.response.body.orderId}}
-POST http://localhost:3000/payments
+POST http://localhost:3001/payments
 Content-Type: application/json
 
 {
@@ -68,4 +68,4 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/orders/{{orderId}}
+GET http://localhost:3001/orders/{{orderId}}

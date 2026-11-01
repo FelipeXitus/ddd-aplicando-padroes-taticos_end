@@ -1,5 +1,5 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
-import { parseError } from 'src/contexts/shared/errors';
+import { parseError } from '../../shared/errors';
 import {
   IntegrationMessage,
   MESSAGE_BUS,
